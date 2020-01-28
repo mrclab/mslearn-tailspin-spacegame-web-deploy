@@ -11,7 +11,7 @@ schedules:
   branches:
     include:
     - release
-    always: true
+  always: true
 
 stages:
 - stage: 'Build'
@@ -110,7 +110,7 @@ stages:
   - deployment: Deploy
     pool:
       vmImage: 'ubuntu-16.04'
-    enviroment: test
+    environment: test
     variables:
       - group: 'Release'
     strategy:
